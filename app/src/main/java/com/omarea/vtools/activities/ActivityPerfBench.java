@@ -91,7 +91,7 @@ public final class ActivityPerfBench extends a.p5 {
         super.onCreate(bundle);
         setContentView(2131558463);
         setBackArrow();
-        setTitle("模拟测试");
+        setTitle("模擬測試");
         a.gu0[] gu0VarArr = z;
         final int i2 = 0;
         ((android.widget.TextView) this.i.a(gu0VarArr[7])).setOnClickListener(new a.pc(this));
@@ -123,9 +123,9 @@ public final class ActivityPerfBench extends a.p5 {
         obj2.c = zArr;
         ((android.widget.TextView) this.j.a(gu0VarArr[8])).setOnClickListener(new a.sg(this, arrayList, obj2, 14));
         final int i6 = 2;
-        ((com.omarea.common.ui.Tags) this.d.a(gu0VarArr[2])).a(new java.lang.String[]{"整数", "浮点"}, 0).b = a.o4.k;
+        ((com.omarea.common.ui.Tags) this.d.a(gu0VarArr[2])).a(new java.lang.String[]{"整數", "浮點"}, 0).b = a.o4.k;
         ((com.omarea.common.ui.Tags) this.m.a(gu0VarArr[12])).a(new java.lang.String[]{"RenderScript", "Float", "Render"}, 0);
-        ((com.omarea.common.ui.Tags) this.n.a(gu0VarArr[15])).a(new java.lang.String[]{"放电", "充电"}, 0);
+        ((com.omarea.common.ui.Tags) this.n.a(gu0VarArr[15])).a(new java.lang.String[]{"放電", "充電"}, 0);
         ((android.widget.Button) this.l.a(gu0VarArr[10])).setOnClickListener(new a.wi(this, 24, obj2));
         ((android.widget.Button) this.k.a(gu0VarArr[9])).setOnClickListener(new a.pc(this));
         final int i7 = 3;

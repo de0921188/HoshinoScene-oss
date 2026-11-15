@@ -208,7 +208,8 @@ public class gy implements a.sy, a.tk1, a.a5, a.cr1 {
                 return true;
             }
         }
-        return false;
+        return com.omarea.vtools.AccessibilitySceneMode.profileServiceConnected
+                || com.omarea.vtools.AccessibilityAuthorization.isAuthorized(context);
     }
 
     public static void P(android.content.SharedPreferences sharedPreferences) {

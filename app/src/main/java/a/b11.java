@@ -169,7 +169,9 @@ public class b11 {
         java.lang.String str = a.pe0.f434a;
         if (new java.io.File(a.pe0.d(t, "profile.json")).exists()) {
             a.lv b = b();
-            if (a.wv.e(b != null ? b.g : null, "SCENE9")) {
+            // N1 online profiles use a new author name; keep legacy custom profiles valid.
+            java.lang.String author = b != null ? b.g : null;
+            if (a.wv.e(author, "SCENE9") || a.wv.e(author, "SCENE N1")) {
                 return true;
             }
         }

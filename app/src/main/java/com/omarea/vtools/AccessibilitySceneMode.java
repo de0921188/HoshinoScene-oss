@@ -2,6 +2,7 @@ package com.omarea.vtools;
 
 /* loaded from: /tmp/jadx-10340276197810293799.dex */
 public final class AccessibilitySceneMode extends android.accessibilityservice.AccessibilityService implements a.wr0 {
+    public static volatile boolean profileServiceConnected;
     public static long C = android.os.SystemClock.uptimeMillis();
     public static long D;
     public static final /* synthetic */ int E = 0;
@@ -371,6 +372,7 @@ public final class AccessibilitySceneMode extends android.accessibilityservice.A
     @Override // android.accessibilityservice.AccessibilityService
     public final void onServiceConnected() {
         super.onServiceConnected();
+        profileServiceConnected = true;
         C = android.os.SystemClock.uptimeMillis();
         a.cp cpVar = com.omarea.Scene.c;
         if (a.fs1.D().getBoolean("daemon_auto", true) && !a.fs1.s("is_auto_install", false) && !a.fs1.s("is_auto_allow", false) && !a.fs1.s("is_skip_ad", false) && !a.fs1.s("keep_alive", false)) {
@@ -404,6 +406,7 @@ public final class AccessibilitySceneMode extends android.accessibilityservice.A
     /* JADX WARN: Type inference failed for: r2v0, types: [a.fp0, a.lj1] */
     @Override // android.app.Service
     public final boolean onUnbind(android.content.Intent intent) {
+        profileServiceConnected = false;
         this.B = false;
         java.util.ArrayList arrayList = a.dc0.f93a;
         a.dc0.d(this);
@@ -415,6 +418,12 @@ public final class AccessibilitySceneMode extends android.accessibilityservice.A
         a.oq0.k = null;
         a.wv.M0(a.wv.b(a.z80.b), null, new a.lj1(2, null), 3);
         return super.onUnbind(intent);
+    }
+
+    @Override
+    public void onDestroy() {
+        profileServiceConnected = false;
+        super.onDestroy();
     }
 
     @Override // a.wr0

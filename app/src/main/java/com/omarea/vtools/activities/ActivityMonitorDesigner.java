@@ -45,7 +45,7 @@ public final class ActivityMonitorDesigner extends a.p5 {
         a.cp cpVar = com.omarea.Scene.c;
         p.setFlags(a.fs1.D().getInt("monitor_general2_flags", 6391));
         a.gu0[] gu0VarArr = m;
-        ((com.omarea.common.ui.Tags) this.e.a(gu0VarArr[1])).a(new java.lang.String[]{"全部", "图形", "文本"}, 0).b = new a.b10(7, new a.rq1(0, (android.widget.LinearLayout) this.f.a(gu0VarArr[2])));
+        ((com.omarea.common.ui.Tags) this.e.a(gu0VarArr[1])).a(new java.lang.String[]{"全部", "圖形", "文字"}, 0).b = new a.b10(7, new a.rq1(0, (android.widget.LinearLayout) this.f.a(gu0VarArr[2])));
         com.omarea.common.ui.SeekBar seekBar = (com.omarea.common.ui.SeekBar) this.g.a(gu0VarArr[3]);
         a.ka1 obj = new a.ka1();
         float f = a.fs1.D().getFloat("monitor_general2_scale", 1.0f);
@@ -83,7 +83,7 @@ public final class ActivityMonitorDesigner extends a.p5 {
         this.k = a.wv.e(a.jf0.b.q(), java.lang.Boolean.TRUE);
         new a.jf0(this);
         a.jf0.a(true);
-        setTitle("自定义监视器");
+        setTitle("自訂監視器");
         com.omarea.ui.fw.FloatMonitorRender p = p();
         a.cp cpVar = com.omarea.Scene.c;
         p.setFlags(a.fs1.D().getInt("monitor_general2_flags", 6391));
